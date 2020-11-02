@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
 
   public formData = {
-    uniqueNuber: '',
+    uniqueNumber: '',
     name: 'automation',
     type:'Internal',
     description:'nothing here',
@@ -29,7 +29,13 @@ export class AppComponent {
 
   generateUniqueNumber(){
     //unique number generate
-    this.formData.uniqueNuber = `${this.formData.type}-Hello`;
+    var result           = '';
+    var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    var charactersLength = characters.length;
+    for ( var i = 0; i < 4; i++ ) {
+        result += characters.charAt(Math.floor(Math.random() * charactersLength));
+    }
+    this.formData.uniqueNumber = `${this.formData.type}-${result}`;
     this.isUniqueNumberGenerated = true;
   }
 }
