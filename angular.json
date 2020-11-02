@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "Automation"
+    }
+  },
+  "defaultProject": "Automation",
+  "cli": {
+    "analytics": false
+  }
 }
