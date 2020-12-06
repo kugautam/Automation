@@ -1,0 +1,45 @@
+<!-- <div class="bg-primary"> bootstrap is simple </div> -->
+
+<div class="container"> 
+    <div></div>
+    <div class="automation__page">
+      <div class="header">
+        Interface Assignment Process
+      </div>
+      <form class="form">
+        <!-- <div *ngIf="isUniqueNumberGenerated">
+          Type Interface: {{ formData.typeInterface }} Unique Number: {{ uniqueGeneratedNumber }}
+        </div> -->
+        <div class="form_item">
+          <label>Project  </label> <span class="importentField">*</span>
+          <input type="text" name="project_name" placeholder="name" [(ngModel)]="formData.projectName" required='required'/>
+        </div>
+        <div class="form_item">
+          <label>Type Interface</label> <span class="importentField">*</span>
+          <select name="type" id="type" [(ngModel)]="formData.typeInterface" >
+            <option value="Select">Select</option>
+            <option value="BW5x">BW5x</option>
+            <option value="Internal">Internal</option>
+            <option value="BW6x">BW6x</option>
+          </select>
+        </div>
+        <div class="form_item">
+          <label>Description</label>
+          <input type="text" name="project_description" placeholder="description" [(ngModel)]="formData.description" required='required' />
+        </div>
+        <div class="form_item">
+          <label>ISR/RITM   </label><span class="importentField">*</span>
+          <input type="text" name="project_isr__ritm" placeholder="isr/ritm" [(ngModel)]="formData.isrRitm" required='required'/>
+        </div>
+        <div class="form_item">
+          <label>Comments  </label>
+          <input type="text" name="project_comments" placeholder="comment" [(ngModel)]="formData.comments" required='required' />
+        </div>
+        <div class="form_item">
+          <button (click)="submit()">Submit</button>
+        </div>
+      </form>
+    </div>
+    <div></div>
+  </div> 
+  
